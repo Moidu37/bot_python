@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 
 # Récupère le token depuis une variable d'environnement
-TOKEN = "MTQ2OTQxOTY4MDc5NDkzNTU0MQ.GHmc72.x11X82IuUh-cBdevvG50PDETcmgl-I4H4vwTdk"
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 # Définir les intents (permissions du bot)
 intents = discord.Intents.default()
@@ -25,3 +25,4 @@ async def salut(ctx):
     await ctx.send("Salut, je suis ton bot hébergé sur PythonAnywhere !")
     
 bot.run(TOKEN)
+
